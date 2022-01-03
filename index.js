@@ -202,6 +202,36 @@ const addEmployee = () => {
         })
 };
 
+// generates html page using fs
+const writeFile = data => {
+    fs.writeFile('./dist/index.html', data, err => {
+        // when error occurs run this
+        if (err) {
+            console.log(err);
+            return;
+// if error does not occur
+        } else {
+            console.log("Your profile has been created!")
+        }
+    })
+};
+
+// add's role/ employee to array
+addManager()
+.then(addEmployee)
+.then(teamArr => {
+    return renderHtml(teamArr);
+})
+// adds them to page
+.then(pageHtml => {
+    return writeFile(pageHtml);
+})
+.catch(err => {
+    console.log(err);
+});
+
+
+
 
 
 
