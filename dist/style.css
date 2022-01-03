@@ -3,7 +3,7 @@
 }
 
 :root {
-    --primary: lightslategray;
+    --primary: rgb(173, 202, 230);
     --secondary: white;
 }
 
@@ -14,11 +14,11 @@ body {
 #navbar {
     background-color: var(--primary);
     color: var(--secondary);
-    font-size: 50px;
+    font-size: 40px;
 }
 
 .navbar-brand {
-    font-size: 50px;
+    font-size: 40px;
 }
 
 

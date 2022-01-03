@@ -1,10 +1,15 @@
 // install dependencies
-const inquirer = require("inquirer");
-const fs= require('inquirer');
+const renderHtml = require('./src/renderHtml');
+
+// require team profiles
 const Engineer = require('./lib/Engineer');
 const Manager = require('./lib/Manager');
 const Intern = require('./lib/Intern');
-const renderHtml = require('./src/renderHtml');
+
+// require inquirer/ file sys
+const inquirer = require("inquirer");
+const fs = require('fs');
+
 
 // empty array for team object
 const teamArr = [];
@@ -177,8 +182,8 @@ const addEmployee = () => {
     ])
         // employee data
         .then(employeeData => {
-            const { name, id, email, role, github, school, confirmAddEmployee } = employeeData;
-            const employee;
+            let { name, id, email, role, github, school, confirmAddEmployee } = employeeData;
+            let employee;
 
             // if Engineer is chosen, ensure all engineer fields are filled
             if (role === "Engineer") {

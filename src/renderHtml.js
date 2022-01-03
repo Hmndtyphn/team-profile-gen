@@ -103,7 +103,7 @@ renderHtml = (data) => {
     }
 
     // join for all employee cards
-    const cardEmployee = pageArr.join('')
+    const employeeCards = pageArr.join('')
 
     // generates team page
     const renderTeam = renderTeamPage(employeeCards);
