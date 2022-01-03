@@ -1,9 +1,9 @@
 // install dependencies
 const inquirer = require("inquirer");
 const fs= require('inquirer');
-const Engineer = require('./lib/engineer');
-const Manager = require('./lib/manager');
-const Intern = require('./lib/intern');
+const Engineer = require('./lib/Engineer');
+const Manager = require('./lib/Manager');
+const Intern = require('./lib/Intern');
 const renderHtml = require('./src/renderHtml');
 
 // empty array for team object
