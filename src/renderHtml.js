@@ -7,7 +7,7 @@ const createManager = function (manager) {
         <div class="card h-100">
             <div class="card-header">
                 <h3>${manager.name}</h3>
-                    <h4>Manager</h4><i class-"material-icons">content_paste</i>
+                    <h4>Manager</h4><i class-"material-icons"></i>
             </div>
 
             <div class="card-body">
@@ -30,7 +30,7 @@ const createEngineer = function (engineer) {
         <div class="card h-100">
             <div class="card-header">
                 <h3>${engineer.name}</h3>
-                    <h4>Intern</h4><i class-"material-icons">laptop_mac</i>
+                    <h4>Intern</h4><i class-"material-icons"></i>
             </div>
 
             <div class="card-body">
@@ -53,7 +53,7 @@ const createIntern = function (intern) {
         <div class="card h-100">
             <div class="card-header">
                 <h3>${intern.name}</h3>
-                    <h4>Intern</h4><i class-"material-icons">assignment_ind</i>
+                    <h4>Intern</h4><i class-"material-icons"></i>
             </div>
 
             <div class="card-body">
@@ -125,7 +125,6 @@ const renderTeamPage = function (employeeCards) {
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
         <link href="https://fonts.googleapis.com/css?family=Public+Sans:300i,300,500&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="stylesheet" href="style.css">
 
     </head>

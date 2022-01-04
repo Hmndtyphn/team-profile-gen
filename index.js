@@ -10,8 +10,9 @@ const fs = require('fs');
 const teamArr = [];
 
 // starts program when running node index.js
-const addManager = () => {
+const buildManager = () => {
     return inquirer.prompt ([
+
         // manager name prompt
         {
             type: 'input',
@@ -87,7 +88,7 @@ const addManager = () => {
 };
 
 // adding role for Engineer/ Intern
-const addEmployee = () => {
+const buildEmployee = () => {
     console.log(`
     Adding Employees to team
     `);
@@ -175,14 +176,14 @@ const addEmployee = () => {
         // add more employees
         {
             type: 'confirm',
-            name: 'confirmAddEmployee',
+            name: 'confirmBuildEmployee',
             message: 'Add more team members?',
             default: false
         }
     ])
         // employee data
         .then(employeeData => {
-            let { name, id, email, role, github, school, confirmAddEmployee } = employeeData;
+            let { name, id, email, role, github, school, confirmBuildEmployee } = employeeData;
             let employee;
 
             // if Engineer is chosen, ensure all engineer fields are filled
@@ -199,8 +200,8 @@ const addEmployee = () => {
             // pushes employee data to
             teamArr.push(employee);
 
-            if (confirmAddEmployee) {
-                return addEmployee(teamArr);
+            if (confirmBuildEmployee) {
+                return buildEmployee(teamArr);
             } else {
                 return teamArr;
             }
@@ -210,6 +211,8 @@ const addEmployee = () => {
 
 // generates html page using fs
 const writeFile = data => {
+    
+    // writes file to index.html
     fs.writeFile('./dist/index.html', data, err => {
         // when error occurs run this
         if (err) {
@@ -223,8 +226,8 @@ const writeFile = data => {
 };
 
 // add's role/ employee to array
-addManager()
-.then(addEmployee)
+buildManager()
+.then(buildEmployee)
 .then(teamArr => {
     return renderHtml(teamArr);
 })

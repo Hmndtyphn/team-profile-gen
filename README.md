@@ -33,4 +33,7 @@
   #### GitHub Profile: Hmndtyphn
   #### GitHub Repo Link: https://github.com/Hmndtyphn/team-profile-gen
 
-  
+  <p align="center">
+  <img src="assets/Screen Shot 2022-01-04 at 3.35.10 PM.png" width="1000" title="hover text" alt="">
+</p> <br>
+
