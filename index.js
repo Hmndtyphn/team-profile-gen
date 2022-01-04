@@ -196,7 +196,7 @@ const addEmployee = () => {
                 console.log(employee);
             }
             
-            // pushes employee data to array
+            // pushes employee data to
             teamArr.push(employee);
 
             if (confirmAddEmployee) {
