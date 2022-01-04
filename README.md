@@ -28,7 +28,7 @@
   https://www-40.ibm.com/software/sla/sladb.nsf 
   ## Questions / Report an Issue
 
-  #### Walkthrough Video Link:
+  #### Walkthrough Video Link: 
   #### Contact Me @: Jared.elliott09@gmail.com<br>
   #### GitHub Profile: Hmndtyphn
   #### GitHub Repo Link: https://github.com/Hmndtyphn/team-profile-gen
