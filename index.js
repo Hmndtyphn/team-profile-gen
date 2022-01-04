@@ -1,22 +1,18 @@
 // install dependencies
 const renderHtml = require('./src/renderHtml');
-
-// require team profiles
 const Engineer = require('./lib/Engineer');
 const Manager = require('./lib/Manager');
 const Intern = require('./lib/Intern');
-
-// require inquirer/ file sys
 const inquirer = require("inquirer");
 const fs = require('fs');
 
-
-// empty array for team object
+// empty array for team
 const teamArr = [];
 
 // starts program when running node index.js
 const addManager = () => {
     return inquirer.prompt ([
+        // manager name prompt
         {
             type: 'input',
             name: 'name',
@@ -31,6 +27,7 @@ const addManager = () => {
             }
         },
 
+        // manager id prompt
         {
             type: 'input',
             name: 'id',
@@ -46,6 +43,7 @@ const addManager = () => {
 
         },
 
+            // manager email prompt
         {
             type: 'input',
             name: 'email',
@@ -61,6 +59,7 @@ const addManager = () => {
             }
         },
 
+        // manager office number prompt
         {
             type: 'input',
             name: 'officeNumber',
@@ -77,6 +76,7 @@ const addManager = () => {
         
     ])
 
+        // then, create the manager card, push to the array
     .then(managerInput => {
         const { name, id, email, officeNumber } = managerInput;
         const manager = new Manager (name, id, email, officeNumber);
@@ -86,7 +86,7 @@ const addManager = () => {
     })
 };
 
-// adding role for Enginer/ Intern
+// adding role for Engineer/ Intern
 const addEmployee = () => {
     console.log(`
     Adding Employees to team
@@ -196,6 +196,7 @@ const addEmployee = () => {
                 console.log(employee);
             }
             
+            // pushes employee data to array
             teamArr.push(employee);
 
             if (confirmAddEmployee) {
